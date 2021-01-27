@@ -1,7 +1,7 @@
 *{
     box-sizing: border-box;
-    margin: auto;
-    padding: auto;
+    margin: 0;
+    padding: 0;
     background: #24252A;
 }
 
@@ -24,24 +24,42 @@ header {
 
 .logo {
     cursor: pointer;
+    order: 3; /*  new change , is changing the order*/
+    margin-left: auto; /*  new change,  push it to the left and other thing to the right*/
 }
 
+nav {
+    order: 1;/* new change*/
+}
+
+.cta {
+    order: 2; /* new change*/
+}
 
 .nav-links{
     list-style: none;
 } 
 
-.nav-links li{ /* nav-link li we target individual items*/
+.nav-links li{ 
     display: inline-block;
-    padding: 0px 10px; /* opx top and bottom , 20px left and right this will separate them */
+    padding: 0px 10px;
 
 
 }
 
 
-.nav-links li a { /* we add a to change the style of the link text*/
+/* new changes here */
+.nav-links li:nth-child(1){ 
+    padding: 0 20px 0 0;
+}
+
+
+
+
+.nav-links li a {
     transition: all 0.3s ease 0s;
     padding: 10px;
+    text-decoration: none;
 }
 
 .nav-links li a:hover{
@@ -52,6 +70,7 @@ header {
 }
 
 button {
+    margin-left: 20px; /* new change*/
     padding: 9px 25px;
     background: rgba(0,136,169,1);
     border: none;
